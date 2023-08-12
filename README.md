@@ -1,2 +1,1 @@
-# numeric
-Algocpp.Numeric
+# Algocpp.Numeric
