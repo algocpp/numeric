@@ -14,18 +14,37 @@ namespace algocpp
 {
 	namespace numeric
 	{
+		namespace base
+		{
+			inline unsigned long long base_csum(std::string s)
+			{
+				unsigned long long result = 0;
+				for (unsigned long long i = 0; i < s.size(); i++)
+				{
+					if (s[i] >= '0' && s[i] <= '9')
+						result += algocpp::type::ctoi(s[i]);
+				}
+
+				return result;
+			}
+		}
+
 		inline unsigned long long csum(std::string s)
 		{
-			unsigned long long result = 0;
-			for (unsigned long long i = 0; i < s.size(); i++)
-			{
-				if (s[i] >= '0' && s[i] <= '9')
-					result += algocpp::type::ctoi(s[i]);
-			}
-
-			return result;
+			return base::base_csum(s);
 		}
-	}
+
+		inline unsigned long long csum(long long n)
+		{
+			return base::base_csum(std::to_string(n));
+		}
+
+		inline unsigned long long csum(unsigned long long n)
+		{
+			return base::base_csum(std::to_string(n));
+		}
+
+		}
 }
 
 #endif // ALGOCPP_NUMERIC_CSUM
