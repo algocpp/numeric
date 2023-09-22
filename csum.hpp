@@ -38,13 +38,7 @@ namespace algocpp
 		{
 			return base::base_csum(std::to_string(n));
 		}
-
-		inline unsigned long long csum(unsigned long long n)
-		{
-			return base::base_csum(std::to_string(n));
-		}
-
-		}
+	}
 }
 
 #endif // ALGOCPP_NUMERIC_CSUM
