@@ -1,3 +1,3 @@
 # Algocpp.Numeric
 
-WIP
+Algocpp Numeric(WIP)
